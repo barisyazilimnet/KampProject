@@ -6,9 +6,13 @@ namespace Core.Utilities.Results
 {
     public class Result : IResult
     {
-        public Result(bool success, string message)
+        public Result(bool success, string message):this(success) // tihs -> class ın kendisi demek
         {
             Message = message;
+        }
+        public Result(bool success)
+        {
+            Success = success;
         }
 
         public bool Success { get; }
